@@ -1,0 +1,195 @@
+/* ============================================
+   STYLE.CSS - Biodata Blasius Kleden
+   Modern & Stylish Design
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);
+    background-attachment: fixed;
+    color: #2c3e50;
+    line-height: 1.7;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+/* ===== HEADER / BIODATA CARD ===== */
+header {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(10px);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    max-width: 650px;
+    margin: 0 auto 40px auto;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 0.8s ease-in;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, #4a90d9, #6dd5fa, #4a90d9);
+}
+
+header h1 {
+    color: #1a3c6e;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+header h2 {
+    color: #4a90d9;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+header h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #4a90d9, #6dd5fa);
+    border-radius: 3px;
+}
+
+/* ===== FOTO PROFIL BULAT ===== */
+img {
+    display: block;
+    margin: 20px auto;
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    outline: 3px solid #4a90d9;
+    box-shadow: 0 10px 25px rgba(74, 144, 217, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 15px 35px rgba(74, 144, 217, 0.6);
+}
+
+/* ===== PARAGRAF DESKRIPSI ===== */
+p {
+    max-width: 520px;
+    margin: 10px auto;
+    font-size: 15.5px;
+    color: #4a5568;
+    text-align: left;
+    padding: 4px 0;
+}
+
+/* ===== TABEL JADWAL KULIAH ===== */
+table {
+    width: 90%;
+    max-width: 700px;
+    margin: 20px auto 40px auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+table th {
+    background: linear-gradient(135deg, #1a3c6e, #4a90d9);
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13.5px;
+    letter-spacing: 1px;
+    padding: 16px 15px;
+    text-align: left;
+}
+
+table td {
+    padding: 13px 15px;
+    border-bottom: 1px solid #eef2f7;
+    color: #34495e;
+    font-size: 14.5px;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table tr:nth-child(even) {
+    background-color: #f6f9fc;
+}
+
+table tbody tr {
+    transition: all 0.25s ease;
+}
+
+table tbody tr:hover {
+    background: linear-gradient(90deg, #e6f0fb, #f0f7ff);
+    transform: scale(1.01);
+}
+
+/* ===== ANIMASI ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== RESPONSIF ===== */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    header {
+        padding: 25px 18px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    header h2 {
+        font-size: 17px;
+    }
+
+    img {
+        width: 140px;
+        height: 140px;
+    }
+
+    table th, table td {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
